@@ -1,0 +1,250 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f2f5; 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.navbar {
+    background-color: #fff;
+    padding: 55px 0;
+    box-shadow: 20 20 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 20px; 
+}
+
+.navbar .nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar .nav-links ul li {
+    margin-left: 30px;
+}
+
+.navbar .nav-links ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links ul li a:hover {
+    color: #ff2f00; 
+}
+
+.navbar .nav-icons i {
+    font-size: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s ease;
+      margin-left: 15px;
+}
+
+.navbar .nav-icons i:hover {
+    color: #007bff;
+}
+
+
+.hero-section {
+    background-image: url('img.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 150px 0; 
+    position: relative;
+    overflow: hidden; 
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1 {
+    font-size: 4em; 
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-buttons .btn-primary {
+    background-color: #007bff; 
+    color: #fff;
+    border: 2px solid #007bff;
+}
+
+.hero-buttons .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.hero-buttons .btn-secondary {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.hero-buttons .btn-secondary:hover {
+    background-color: #fff;
+    color: #007bff;
+}
+
+.features-section {
+    background-color: #fff;
+    padding: 80px 0;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05); 
+    margin-top: -50px; 
+    position: relative;
+    z-index: 5;
+}
+
+.features-section .container {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap; 
+}
+
+.feature-item {
+    flex: 1;
+    min-width: 280px; 
+    text-align: center;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.feature-item i {
+    font-size: 3em;
+    color: #007bff; 
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.feature-item p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+
+.pagination-dots {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 20px;
+}
+
+.pagination-dots span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-dots span.active {
+    background-color: #007bff;
+    width: 25px; 
+    border-radius: 5px; 
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none; 
+    }
+
+    .navbar .nav-icons {
+        margin-left: auto; 
+    }
+
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-section p {
+        font-size: 1em;
+    }
+
+    .hero-buttons .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .features-section .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
